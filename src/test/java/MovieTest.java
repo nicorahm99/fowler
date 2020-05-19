@@ -4,17 +4,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MovieTest {
 
-    Movie testMovie = new Movie("TestMovie", 5);
+    Movie testMovie = new Movie("TestMovie", Movie.CHILDRENS);
 
     @Test
     void getPriceCode() {
-        assertEquals(5, testMovie.getPriceCode());
+        assertEquals(Movie.CHILDRENS, testMovie.getPriceCode());
     }
 
     @Test
     void setPriceCode() {
-        testMovie.setPriceCode(6);
-        assertEquals(6, testMovie.getPriceCode());
+        testMovie.setPriceCode(Movie.REGULAR);
+        assertEquals(Movie.REGULAR, testMovie.getPriceCode());
     }
 
     @Test
